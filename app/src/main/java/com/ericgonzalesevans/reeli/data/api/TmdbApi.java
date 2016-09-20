@@ -1,4 +1,4 @@
-package com.ericgonzalesevans.movieapp.data.api;
+package com.ericgonzalesevans.reeli.data.api;
 
 public interface TmdbApi {
     public static final String ENDPOINT_MOVIES_BOXOFFICE = "http://api.themoviedb.org/3/movie/now_playing";

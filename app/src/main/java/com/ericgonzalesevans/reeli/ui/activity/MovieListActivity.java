@@ -1,4 +1,4 @@
-package com.ericgonzalesevans.movieapp.ui.activity;
+package com.ericgonzalesevans.reeli.ui.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
-import com.ericgonzalesevans.movieapp.R;
-import com.ericgonzalesevans.movieapp.data.model.Movie;
-import com.ericgonzalesevans.movieapp.ui.adapter.MovieListAdapter;
+import com.ericgonzalesevans.reeli.R;
+import com.ericgonzalesevans.reeli.data.model.Movie;
+import com.ericgonzalesevans.reeli.ui.adapter.MovieListAdapter;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;

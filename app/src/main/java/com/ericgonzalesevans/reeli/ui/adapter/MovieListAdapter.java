@@ -1,4 +1,4 @@
-package com.ericgonzalesevans.movieapp.ui.adapter;
+package com.ericgonzalesevans.reeli.ui.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,9 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.ericgonzalesevans.movieapp.R;
-import com.ericgonzalesevans.movieapp.data.api.TmdbApi;
-import com.ericgonzalesevans.movieapp.data.model.Movie;
+import com.ericgonzalesevans.reeli.R;
+import com.ericgonzalesevans.reeli.data.api.TmdbApi;
+import com.ericgonzalesevans.reeli.data.model.Movie;
 
 import java.util.ArrayList;
 

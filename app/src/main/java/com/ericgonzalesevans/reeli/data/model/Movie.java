@@ -1,4 +1,4 @@
-package com.ericgonzalesevans.movieapp.data.model;
+package com.ericgonzalesevans.reeli.data.model;
 
 import android.graphics.Bitmap;
 

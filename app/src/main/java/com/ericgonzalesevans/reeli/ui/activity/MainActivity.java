@@ -1,12 +1,12 @@
-package com.ericgonzalesevans.movieapp.ui.activity;
+package com.ericgonzalesevans.reeli.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.ericgonzalesevans.movieapp.R;
-import com.ericgonzalesevans.movieapp.data.api.TmdbApi;
+import com.ericgonzalesevans.reeli.R;
+import com.ericgonzalesevans.reeli.data.api.TmdbApi;
 
 public class MainActivity extends AppCompatActivity {
 
