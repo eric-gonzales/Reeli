@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MovieApp</string>
+    <string name="app_name">Reeli</string>
     <string name="box_office">Box Office</string>
     <string name="upcoming">Upcoming</string>
     <string name="in_theaters">In Theaters</string>
