@@ -1,5 +1,7 @@
 package com.ericgonzalesevans.reeli.ui.activity;
 
+import android.app.SearchManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -8,6 +10,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import com.ericgonzalesevans.reeli.R;
+import com.ericgonzalesevans.reeli.data.api.TmdbApi;
 import com.ericgonzalesevans.reeli.data.model.Movie;
 import com.ericgonzalesevans.reeli.ui.adapter.MovieListAdapter;
 import com.google.gson.Gson;
@@ -48,8 +51,12 @@ public class MovieListActivity extends AppCompatActivity {
 
     public void fetchMovies(){
         OkHttpClient client = new OkHttpClient();
-        HttpUrl.Builder builder = HttpUrl.parse(getIntent().getStringExtra("ApiEndpoint")).newBuilder();
+        String api_endpoint = getIntent().getStringExtra("ApiEndpoint");
+        HttpUrl.Builder builder = HttpUrl.parse(api_endpoint).newBuilder();
         builder.addQueryParameter("api_key", getString(R.string.api_key_tmdb));
+        if(getIntent().getStringExtra("query") != null){
+            builder.addQueryParameter("query", getIntent().getStringExtra("query"));
+        }
         String url = builder.build().toString();
 
         Request request = new Request.Builder().url(url).build();
