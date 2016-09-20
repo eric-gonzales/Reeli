@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    android:layout_weight="1"
+    tools:context=".ui.activity.MainActivity">
+    <TableLayout
+        android:id="@+id/homeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="true">
+        <TableRow
+            android:id="@+id/homeBoxOffice"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/homeBoxOfficeText"
+                android:textSize="@dimen/mainview_tr_category"
+                android:text="@string/box_office"
+                android:onClick="toBoxOfficeMovies"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/homeUpcoming"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/homeUpcomingText"
+                android:textSize="@dimen/mainview_tr_category"
+                android:text="@string/upcoming"
+                android:onClick="toUpcomingMovies"/>
+        </TableRow>
+    </TableLayout>
+</ScrollView>
