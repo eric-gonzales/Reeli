@@ -10,7 +10,6 @@ import android.view.MenuInflater;
 import android.view.View;
 
 import com.ericgonzalesevans.reeli.R;
-import com.ericgonzalesevans.reeli.data.api.TmdbApi;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 intent.putExtra("Title", getString(R.string.search));
-                intent.putExtra("ApiEndpoint", TmdbApi.ENDPOINT_MOVIES_SEARCH);
+                intent.putExtra("MovieResultsPageCall", "Search");
                 intent.putExtra("query", query);
                 startActivity(intent);
                 return false;
@@ -46,14 +45,14 @@ public class MainActivity extends AppCompatActivity {
     public void toBoxOfficeMovies(View view){
         Intent intent = new Intent(this, MovieListActivity.class);
         intent.putExtra("Title", getString(R.string.box_office));
-        intent.putExtra("ApiEndpoint", TmdbApi.ENDPOINT_MOVIES_BOXOFFICE);
+        intent.putExtra("MovieResultsPageCall", "BoxOffice");
         startActivity(intent);
     }
 
     public void toUpcomingMovies(View view){
         Intent intent = new Intent(this, MovieListActivity.class);
         intent.putExtra("Title", getString(R.string.upcoming));
-        intent.putExtra("ApiEndpoint", TmdbApi.ENDPOINT_MOVIES_UPCOMING);
+        intent.putExtra("MovieResultsPageCall", "Upcoming");
         startActivity(intent);
     }
 
