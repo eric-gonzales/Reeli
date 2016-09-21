@@ -1,10 +1,10 @@
 package com.ericgonzalesevans.reeli.data.model;
 
-import android.graphics.Bitmap;
+import java.util.ArrayList;
 
 public class Movie {
     private int id;
-    private Bitmap poster;
+
     private String poster_path;
     private String overview;
     private String release_date;
@@ -16,14 +16,6 @@ public class Movie {
 
     public void setId(int id){
         this.id = id;
-    }
-
-    public Bitmap getPoster() {
-        return poster;
-    }
-
-    public void setPoster(Bitmap poster) {
-        this.poster = poster;
     }
 
     public String getPoster_path(){
