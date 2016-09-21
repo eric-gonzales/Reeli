@@ -1,7 +1,5 @@
 package com.ericgonzalesevans.reeli.ui.activity;
 
-import android.app.SearchManager;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -53,9 +51,9 @@ public class MovieListActivity extends AppCompatActivity {
         OkHttpClient client = new OkHttpClient();
         String api_endpoint = getIntent().getStringExtra("ApiEndpoint");
         HttpUrl.Builder builder = HttpUrl.parse(api_endpoint).newBuilder();
-        builder.addQueryParameter("api_key", getString(R.string.api_key_tmdb));
+        builder.addQueryParameter(TmdbApi.PARAMETER_API_KEY, getString(R.string.api_key_tmdb));
         if(getIntent().getStringExtra("query") != null){
-            builder.addQueryParameter("query", getIntent().getStringExtra("query"));
+            builder.addQueryParameter(TmdbApi.PARAMETER_QUERY, getIntent().getStringExtra("query"));
         }
         String url = builder.build().toString();
 
